@@ -15,7 +15,11 @@
  */
 
 function coinFlip() {
-
+	if (Math.floor(Math.random()*2)>=1) {
+			return 'heads';
+		} else {
+			return 'tails';
+		}
 }
 
 /** Multiple coin flips
@@ -38,7 +42,11 @@ function coinFlip() {
  */
 
 function coinFlips(flips) {
-
+	let response = new Array(flips);
+	for (let i = 0; i<flips; i++) {
+		response[i] = coinFlip();
+	}
+	return response;
 }
 
 /** Count multiple flips
